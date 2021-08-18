@@ -83,3 +83,11 @@ The results from running these tests will be located in "results/tests-new" and 
 
 Previously run results from these are located in folders "results/tests" and "results/tests-roc"
 
+
+### Input and Result file Format
+
+Both the input and result file formats follow the same conventions. both files are organized into a tab-delimited files where there is a column for each test and a row for each of the nodes. The input files only contain rows for nodes where the input value is being specified. The user can specify the nodes based on Reactome IDs or other IDs found in the db_id_to_name_mapping file including UNIPROT gene names.
+
+Results files contain a row for every node in the pathway and are specified with Reactome IDs.
+
+The values themselves range from 0.01 to 100. Where "1" is unchanged, "0.01" is 1/100th of the amount, and "100" is 100 times the amount relative to normal.

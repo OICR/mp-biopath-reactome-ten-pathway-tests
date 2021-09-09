@@ -1,6 +1,10 @@
 # MP Biopath Reactome Ten Pathway Tests
 These are tests used to test MP-BioPath results with Reactome Pathways
 
+## Dependencies (Docker Engine)
+
+To run this program you will need to have access to command line and also have Docker installed. If docker is not installed please see https://docs.docker.com/engine/install/.
+
 ## Resources
 
 The version of [MP-BioPath](https://github.com/OICR/mp-biopath) used to run this analysis is [1.0.4](https://github.com/OICR/mp-biopath/releases/tag/1.0.1).

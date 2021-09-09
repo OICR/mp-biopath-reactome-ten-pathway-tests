@@ -1,4 +1,10 @@
-set -e
+if [[ $(which docker) && $(docker --version) ]]; then
+    echo "Starting to process the pathways"
+else
+    echo "Docker not isntalled. Please see https://docs.docker.com/engine/install/"
+    exit 2
+
+fi
 
 echo "Running: Activation_of_anterior_HOX_genes_in_hindbrain_development_during_early_embryogenesis"
 docker run -v $(pwd):/data -t oicr/mpbiopath:1.0.4 /bin/bash -c "julia bin/mp-biopath inference --config /data/configs/Activation_of_anterior_HOX_genes_in_hindbrain_development_during_early_embryogenesis.yaml"
